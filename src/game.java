@@ -95,7 +95,7 @@ public class game extends javax.swing.JFrame {
         Ag = new javax.swing.JLabel();
         Cu = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BackButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -410,16 +410,16 @@ public class game extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(10, 11, 168, 23);
 
-        jButton1.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 11)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 51, 204));
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BackButton.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 11)); // NOI18N
+        BackButton.setForeground(new java.awt.Color(0, 51, 204));
+        BackButton.setText("Back");
+        BackButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(464, 12, 67, 23);
+        getContentPane().add(BackButton);
+        BackButton.setBounds(464, 12, 67, 23);
 
         jMenu1.setText("File");
 
@@ -490,10 +490,10 @@ public class game extends javax.swing.JFrame {
         
     }//GEN-LAST:event_CaMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
         new Inc().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BackButtonActionPerformed
 
     private void FluorineMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FluorineMouseClicked
         if(!t){
@@ -1104,6 +1104,7 @@ public class game extends javax.swing.JFrame {
     private javax.swing.JLabel Ag;
     private javax.swing.JLabel Al;
     private javax.swing.JLabel Aluminium;
+    private javax.swing.JButton BackButton;
     private javax.swing.JLabel C;
     private javax.swing.JLabel Ca;
     private javax.swing.JLabel Calcium;
@@ -1131,7 +1132,6 @@ public class game extends javax.swing.JFrame {
     private javax.swing.JLabel Potassium;
     private javax.swing.JLabel Sliver;
     private javax.swing.JLabel Sodium;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
