@@ -32,9 +32,9 @@ public class Inc extends javax.swing.JFrame {
 
         jProgressBar1 = new javax.swing.JProgressBar();
         Tittle = new javax.swing.JLabel();
-        Start = new javax.swing.JButton();
-        Explain = new javax.swing.JButton();
-        Information = new javax.swing.JButton();
+        StartButton = new javax.swing.JButton();
+        ExplainButton = new javax.swing.JButton();
+        InformationButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -46,30 +46,30 @@ public class Inc extends javax.swing.JFrame {
         Tittle.setForeground(new java.awt.Color(47, 32, 227));
         Tittle.setText("We Are Twins");
 
-        Start.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 12)); // NOI18N
-        Start.setForeground(new java.awt.Color(255, 51, 51));
-        Start.setText("Let's Start");
-        Start.addActionListener(new java.awt.event.ActionListener() {
+        StartButton.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 12)); // NOI18N
+        StartButton.setForeground(new java.awt.Color(255, 51, 51));
+        StartButton.setText("Let's Start");
+        StartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                StartActionPerformed(evt);
+                StartButtonActionPerformed(evt);
             }
         });
 
-        Explain.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 12)); // NOI18N
-        Explain.setForeground(new java.awt.Color(51, 51, 255));
-        Explain.setText("How to play");
-        Explain.addActionListener(new java.awt.event.ActionListener() {
+        ExplainButton.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 12)); // NOI18N
+        ExplainButton.setForeground(new java.awt.Color(51, 51, 255));
+        ExplainButton.setText("How to play");
+        ExplainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExplainActionPerformed(evt);
+                ExplainButtonActionPerformed(evt);
             }
         });
 
-        Information.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 12)); // NOI18N
-        Information.setForeground(new java.awt.Color(39, 160, 9));
-        Information.setText("Information");
-        Information.addActionListener(new java.awt.event.ActionListener() {
+        InformationButton.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 12)); // NOI18N
+        InformationButton.setForeground(new java.awt.Color(39, 160, 9));
+        InformationButton.setText("Information");
+        InformationButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InformationActionPerformed(evt);
+                InformationButtonActionPerformed(evt);
             }
         });
 
@@ -103,9 +103,9 @@ public class Inc extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(202, 202, 202)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Explain, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Start, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Information))))
+                            .addComponent(ExplainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(StartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(InformationButton))))
                 .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -114,11 +114,11 @@ public class Inc extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(Tittle)
                 .addGap(51, 51, 51)
-                .addComponent(Start)
+                .addComponent(StartButton)
                 .addGap(50, 50, 50)
-                .addComponent(Explain)
+                .addComponent(ExplainButton)
                 .addGap(48, 48, 48)
-                .addComponent(Information)
+                .addComponent(InformationButton)
                 .addContainerGap(98, Short.MAX_VALUE))
         );
 
@@ -129,20 +129,20 @@ public class Inc extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
+    private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
         new game().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_StartActionPerformed
+    }//GEN-LAST:event_StartButtonActionPerformed
 
-    private void ExplainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExplainActionPerformed
+    private void ExplainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExplainButtonActionPerformed
         new Explain().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_ExplainActionPerformed
+    }//GEN-LAST:event_ExplainButtonActionPerformed
 
-    private void InformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InformationActionPerformed
+    private void InformationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InformationButtonActionPerformed
         new Information().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_InformationActionPerformed
+    }//GEN-LAST:event_InformationButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,9 +180,9 @@ public class Inc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Explain;
-    private javax.swing.JButton Information;
-    private javax.swing.JButton Start;
+    private javax.swing.JButton ExplainButton;
+    private javax.swing.JButton InformationButton;
+    private javax.swing.JButton StartButton;
     private javax.swing.JLabel Tittle;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;

@@ -64,9 +64,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Explain" min="-2" pref="135" max="-2" attributes="0"/>
-                          <Component id="Start" min="-2" pref="135" max="-2" attributes="0"/>
-                          <Component id="Information" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ExplainButton" min="-2" pref="135" max="-2" attributes="0"/>
+                          <Component id="StartButton" min="-2" pref="135" max="-2" attributes="0"/>
+                          <Component id="InformationButton" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -80,11 +80,11 @@
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Component id="Tittle" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-              <Component id="Start" min="-2" max="-2" attributes="0"/>
+              <Component id="StartButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Component id="Explain" min="-2" max="-2" attributes="0"/>
+              <Component id="ExplainButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-              <Component id="Information" min="-2" max="-2" attributes="0"/>
+              <Component id="InformationButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="98" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -102,7 +102,7 @@
         <Property name="text" type="java.lang.String" value="We Are Twins"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Start">
+    <Component class="javax.swing.JButton" name="StartButton">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Lint McCree Intl BB" size="12" style="0"/>
@@ -113,10 +113,10 @@
         <Property name="text" type="java.lang.String" value="Let&apos;s Start"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="StartActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="StartButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Explain">
+    <Component class="javax.swing.JButton" name="ExplainButton">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Lint McCree Intl BB" size="12" style="0"/>
@@ -127,10 +127,10 @@
         <Property name="text" type="java.lang.String" value="How to play"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExplainActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExplainButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Information">
+    <Component class="javax.swing.JButton" name="InformationButton">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Lint McCree Intl BB" size="12" style="0"/>
@@ -141,7 +141,7 @@
         <Property name="text" type="java.lang.String" value="Information"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InformationActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InformationButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
