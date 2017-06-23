@@ -30,11 +30,11 @@ public class Information extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        ProducerLabel = new javax.swing.JLabel();
+        CourseLabel = new javax.swing.JLabel();
+        DateLabel = new javax.swing.JLabel();
+        BackButton = new javax.swing.JButton();
+        UserLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -42,26 +42,26 @@ public class Information extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe Print", 0, 16)); // NOI18N
-        jLabel1.setText("Producer : Gloria Song");
+        ProducerLabel.setFont(new java.awt.Font("Segoe Print", 0, 16)); // NOI18N
+        ProducerLabel.setText("Producer : Gloria Song");
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 0, 16)); // NOI18N
-        jLabel2.setText("Course : ICS3U");
+        CourseLabel.setFont(new java.awt.Font("Segoe Print", 0, 16)); // NOI18N
+        CourseLabel.setText("Course : ICS3U");
 
-        jLabel3.setFont(new java.awt.Font("Segoe Print", 0, 16)); // NOI18N
-        jLabel3.setText("Date : 20 June, 2017");
+        DateLabel.setFont(new java.awt.Font("Segoe Print", 0, 16)); // NOI18N
+        DateLabel.setText("Date : 20 June, 2017");
 
-        jButton1.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 11)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 51, 255));
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BackButton.setFont(new java.awt.Font("Lint McCree Intl BB", 0, 11)); // NOI18N
+        BackButton.setForeground(new java.awt.Color(0, 51, 255));
+        BackButton.setText("Back");
+        BackButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackButtonActionPerformed(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe Print", 0, 16)); // NOI18N
-        jLabel4.setText("User : Grade 9 Students");
+        UserLabel.setFont(new java.awt.Font("Segoe Print", 0, 16)); // NOI18N
+        UserLabel.setText("User : Grade 9 Students");
 
         jMenu1.setText("File");
 
@@ -89,30 +89,30 @@ public class Information extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(UserLabel)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
+                            .addComponent(DateLabel)
+                            .addComponent(CourseLabel)
+                            .addComponent(ProducerLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(BackButton)
                         .addGap(68, 68, 68))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(BackButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
+                .addComponent(ProducerLabel)
                 .addGap(29, 29, 29)
-                .addComponent(jLabel2)
+                .addComponent(CourseLabel)
                 .addGap(37, 37, 37)
-                .addComponent(jLabel3)
+                .addComponent(DateLabel)
                 .addGap(38, 38, 38)
-                .addComponent(jLabel4)
+                .addComponent(UserLabel)
                 .addContainerGap(103, Short.MAX_VALUE))
         );
 
@@ -123,10 +123,10 @@ public class Information extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
         new Inc().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BackButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,11 +164,11 @@ public class Information extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton BackButton;
+    private javax.swing.JLabel CourseLabel;
+    private javax.swing.JLabel DateLabel;
+    private javax.swing.JLabel ProducerLabel;
+    private javax.swing.JLabel UserLabel;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
