@@ -4,7 +4,15 @@
  * and open the template in the editor.
  */
 
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+import javax.swing.JOptionPane;
 import java.io.*;
 import java.util.*;
 
@@ -61,17 +69,16 @@ public class GUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4)
-                            .addComponent(jButton3)
-                            .addComponent(jButton2)
-                            .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton4)
+                    .addComponent(jButton3)
+                    .addComponent(jButton2)
+                    .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(104, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -81,13 +88,13 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jButton1)
-                .addGap(49, 49, 49)
+                .addGap(58, 58, 58)
                 .addComponent(jButton2)
                 .addGap(59, 59, 59)
                 .addComponent(jButton3)
                 .addGap(60, 60, 60)
                 .addComponent(jButton4)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,7 +118,111 @@ public class GUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {    
+    public class JeopardyBoard {
+    public static final int WINDOW_WIDTH = 1000;
+    public static final int WINDOW_HEIGHT = 800;
+    public static void main(String args[]) throws IOexpction{ 
+        System.out.println("Working Directory = " +  System.getProperty("user.dir"));
+        String[] Chapter = {"Cells","Genetics","Circulation & Digestion & Respiration","Plants","Diversity of living things", "Evolution" };
+        JFrame frame = new JFrame("Jeopardy!");
+        frame.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        int width  = 6;
+        int height = 6;
+        int l,m,n;
+        String Qestio,Answe,Section;
+        String[][] Question=new String[height][width];
+        String[][] Answer=new String[height][width];
+        JButton[] categories = new JButton[width];
+        for (int i = 0; i < width; i++) {
+            categories[i] = new JButton(Chapter[i]);
+            categories[i].setSize(WINDOW_WIDTH / width - 4, 20);
+        }
+        JButton[][] BLK = new JButton[height][width];
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                BLK[i][j] = new JButton("Level" + i);
+                JBox.setSize(BLK[i][j], WINDOW_WIDTH / width - 4,
+                        WINDOW_HEIGHT / height - 36);
+                BLK[i][j].setBackground(Color.BLUE);
+                BLK[i][j].setForeground(Color.YELLOW);
+                BLK[i][j].setBorder(BorderFactory.createRaisedBevelBorder());
+                BLK[i][j].setFont(new Font("DejaVu Serif", Font.BOLD, 32));
+                
+            }
+        }
+        JBox board =
+                JBox.vbox(
+                        JBox.hbox(categories[0],categories[1],categories[2],categories[3],categories[4],categories[5]),
+                        JBox.hbox(BLK[0][0], BLK[0][1], BLK[0][2], BLK[0][3],BLK[0][4], BLK[0][5]),
+                        JBox.hbox(BLK[1][0], BLK[1][1], BLK[1][2], BLK[1][3],BLK[1][4], BLK[1][5]),
+                        JBox.hbox(BLK[2][0], BLK[2][1], BLK[2][2], BLK[2][3],BLK[2][4], BLK[2][5]),
+                        JBox.hbox(BLK[3][0], BLK[3][1], BLK[3][2], BLK[3][3],BLK[3][4], BLK[3][5]),
+                        JBox.hbox(BLK[4][0], BLK[4][1], BLK[4][2], BLK[4][3],BLK[4][4], BLK[4][5]),
+                        JBox.hbox(BLK[5][0], BLK[5][1], BLK[5][2], BLK[5][3],BLK[5][4], BLK[5][5])
+                );
+        board.setSize(WINDOW_WIDTH - 20, WINDOW_HEIGHT);
+        frame.add(board);
+        frame.setVisible(true);
+//        String f1=System.getProperty("user.dir")+"/src/finaltest/QuestionAnswer.txt";
+        String f1="/home/sdx/NetBeansProjects/Jeopardy-Game11/Jeopardy Game/src/finaltest/QuestionAnswer.txt";
+        final BufferedReader reader = new BufferedReader(new FileReader(f1));
+        final ArrayList<String> lines = new ArrayList<String>();
+        String s;
+        String S;
+        S="";
+        while ((s = reader.readLine()) != null) {
+            S=S+s;
+        }
+        reader.close();
+        
+        for ( int i = 0; i < height; i++) {
+            l=S.indexOf(Chapter[i]);
+            if(i<5)
+            {
+                m=S.indexOf(Chapter[i+1]);
+                Section=S.substring(l,m);
+            }
+            else
+            {
+                Section=S.substring(l,S.length());
+            }
+            for (int  j = 0; j < width; j++) {
+                l=Section.indexOf(String.valueOf(j+1)+". ");
+                m=Section.indexOf("a. ",1);
+                Qestio=Section.substring(l+3, m);
+                Question[i][j]=Qestio;
+                Section=Section.substring(m,Section.length());
+                
+                n=Section.indexOf("()",1);
+                Answe=Section.substring(2,n);
+                Answer[i][j]=Answe;
+            }
+        }
+        for ( int i = 0; i < height; i++) {
+            for (int  j = 0; j < width; j++) {
+                String cd=Question[i][j];
+                String ab=Answer[i][j];
+                BLK[i][j].addActionListener(new ActionListener() {
+                    @Override
+
+                    public void actionPerformed(ActionEvent e) {
+                        String your_answer = JOptionPane.showInputDialog(cd);
+                        JOptionPane.showMessageDialog(null, "Reference and yours: "+ ab +" Vs " + your_answer);
+                        JButton source = (JButton) e.getSource();
+                        source.setEnabled(false);
+                        source.setBackground(Color.GREEN);
+                    }
+                });
+            }
+        }
+        
+    
+    
+
+        
+        
+       
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -142,26 +253,29 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }
+}
 // PUT YOUR METHODS HERE
-    public static void Readfile() throws IOException {
-        ArrayList<String> quotes = new ArrayList<String>();
-        BufferedReader readFile = new BufferedReader(new FileReader("Question.txt"));
-        String line = "";
-    }
     
-    public static void ButtonArray(){
-        JButton[][] buttons = new JButton[6][6];
-        
-        for(int i = 0; i < buttons.length; i++){
-            for(int j=0; j<buttons[i].length; j++){
-                buttons[i][j] = new JButton("Button [" + i + "][" + j + "]");
-            }
-        }
-    }
     
-    public static boolean Answer(boolean Aw){
-       return Aw; 
-    }
+//    public static void Readfile() throws IOException {
+//        ArrayList<String> quotes = new ArrayList<String>();
+//        BufferedReader readFile = new BufferedReader(new FileReader("Question.txt"));
+//        String line = "";
+//    }
+//    
+//    public static void ButtonArray(){
+//        JButton[][] buttons = new JButton[6][6];
+//        
+//        for(int i = 0; i < buttons.length; i++){
+//            for(int j=0; j<buttons[i].length; j++){
+//                buttons[i][j] = new JButton("Button [" + i + "][" + j + "]");
+//            }
+//        }
+//    }
+//    
+//    public static boolean Answer(boolean Aw){
+//       return Aw; 
+//    }
     
     
     
