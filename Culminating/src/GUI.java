@@ -118,10 +118,10 @@ public class GUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public class JeopardyBoard {
+    public class Board {
     public static final int WINDOW_WIDTH = 1000;
     public static final int WINDOW_HEIGHT = 800;
-    public static void main(String args[]) throws IOexpction{ 
+    public static void main(String args[]) throws IOException{ 
         System.out.println("Working Directory = " +  System.getProperty("user.dir"));
         String[] Chapter = {"Cells","Genetics","Circulation & Digestion & Respiration","Plants","Diversity of living things", "Evolution" };
         JFrame frame = new JFrame("Jeopardy!");
@@ -164,9 +164,9 @@ public class GUI extends javax.swing.JFrame {
         board.setSize(WINDOW_WIDTH - 20, WINDOW_HEIGHT);
         frame.add(board);
         frame.setVisible(true);
-//        String f1=System.getProperty("user.dir")+"/src/finaltest/QuestionAnswer.txt";
-        String f1="/home/sdx/NetBeansProjects/Jeopardy-Game11/Jeopardy Game/src/finaltest/QuestionAnswer.txt";
-        final BufferedReader reader = new BufferedReader(new FileReader(f1));
+
+        //Read file
+        final BufferedReader reader = new BufferedReader(new FileReader("Question.txt"));
         final ArrayList<String> lines = new ArrayList<String>();
         String s;
         String S;
@@ -217,17 +217,6 @@ public class GUI extends javax.swing.JFrame {
             }
         }
         
-    
-    
-
-        
-        
-       
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
